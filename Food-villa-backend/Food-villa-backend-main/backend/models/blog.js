@@ -1,0 +1,35 @@
+import mongoose from "mongoose";
+
+const blogSchema = new mongoose.Schema(
+  {
+    title: {
+      type: String,
+      required: true
+    },
+    description: {
+      type: String,
+      required: true
+    },
+
+    smallImage: {
+      type: String,
+      required: true
+    },
+    smallPublicId: {
+      type: String,
+      required: true
+    },
+
+    largeImage: {
+      type: String,
+      required: true
+    },
+    largePublicId: {
+      type: String,
+      required: true
+    }
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Blog", blogSchema);

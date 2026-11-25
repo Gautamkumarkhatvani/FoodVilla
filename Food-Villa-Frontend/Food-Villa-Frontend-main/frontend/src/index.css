@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin-top: auto;
+}
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; 
+  overflow-y: auto;  
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar {
+  display: none;
+}
+html,
+body,
+#root {
+  scrollbar-width: none;    
+  -ms-overflow-style: none;   
+}
+@media print {
+  body {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  img {
+    display: block !important;
+    max-width: 100% !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

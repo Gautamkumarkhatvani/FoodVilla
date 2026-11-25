@@ -1,0 +1,78 @@
+
+@media print {
+
+  * {
+    box-sizing: border-box;
+    
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: visible !important;
+  }
+
+  /* HIDE NAVBAR & FOOTER */
+  .navbar-wrapper,
+  .navbar,
+  footer {
+    display: none !important;
+  }
+
+  /* FORCE PORTRAIT BEHAVIOR */
+  @page {
+    size: A4 portrait;
+    margin: 16mm;
+  }
+
+  /* KILL FLEX & GRID */
+  section,
+  .taste-grid,
+  .taste-grid2,
+  .recipes-grid,
+  .blog-list,
+  .kitchen-grid,
+  .image-grid {
+    display: block !important;
+  }
+
+  /* EVERY CARD = NEW BLOCK */
+  .taste-card,
+  .taste-card2,
+  .recipe-card,
+  .recipes-item,
+  .blog-row,
+  .blog-card,
+  .kitchen-card,
+  .image-card {
+    display: block !important;
+    width: 100% !important;
+    margin-bottom: 40px !important;
+
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* IMAGES SAFE */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* TEXT SAFE */
+  h1, h2, h3, h4, h5, p {
+    page-break-after: avoid !important;
+  }
+
+  /* REMOVE SHADOWS & EFFECTS */
+  * {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  /* BUTTONS HIDE */
+  button {
+    display: none !important;
+  }
+}
